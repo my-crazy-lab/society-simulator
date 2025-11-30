@@ -1,6 +1,6 @@
-import chalk from 'chalk';
+import chalk, { Chalk } from 'chalk';
 
-export const characterColors: Record<string, typeof chalk> = {
+export const characterColors: Record<string, Chalk> = {
   Luna: chalk.magenta,
   Alex: chalk.blue,
   Maya: chalk.yellow,
@@ -11,6 +11,6 @@ export const characterColors: Record<string, typeof chalk> = {
   Riven: chalk.white
 };
 
-export const getColorForCharacter = (name: string) => {
+export const getColorForCharacter = (name: string): Chalk => {
   return characterColors[name] || chalk.white;
 };

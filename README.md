@@ -69,7 +69,26 @@ The simulation will:
 - Log everything to console with colors
 - Save logs to `logs/society-YYYY-MM-DD.txt`
 
-### 5. Stop the Simulation
+### 5. View the Society
+
+**While running** - The simulation displays everything in the console with colors in real-time.
+
+**View saved logs** - Open a second terminal and run:
+
+```bash
+# View the latest log with colors
+npm run view
+
+# Follow the log in real-time (like tail -f)
+npm run view:follow
+
+# View a specific log file
+npm run view society-2025-11-30.txt
+```
+
+The viewer displays all conversations with the same color-coding as the live simulation.
+
+### 6. Stop the Simulation
 
 Press `Ctrl+C` to gracefully shutdown. The log will be saved automatically.
 
@@ -83,6 +102,7 @@ Press `Ctrl+C` to gracefully shutdown. The log will be saved automatically.
 │   ├── gemini.ts         # Gemini API client
 │   ├── characters.ts     # Character definitions
 │   ├── logger.ts         # Console & file logging
+│   ├── viewer.ts         # Log viewer with colors
 │   ├── time.ts           # In-world time management
 │   ├── colors.ts         # Character color mapping
 │   ├── config.ts         # Configuration & env vars
@@ -119,6 +139,19 @@ Edit `src/config.ts` to adjust:
 - Time separator frequency (default: 20-30 messages)
 - Auto-save interval (default: every 100 messages)
 - Max token history (default: 12,000 tokens)
+
+## � Viewbing Options
+
+**Option 1: Watch live in console**
+- Just run `npm start` and watch the chaos unfold in real-time
+
+**Option 2: Use the log viewer**
+- Run `npm run view` to see the latest log with colors
+- Run `npm run view:follow` to watch in real-time (great for a second terminal)
+
+**Option 3: Read raw logs**
+- All logs are saved to `logs/society-YYYY-MM-DD.txt`
+- Use `cat`, `less`, or `tail -f` to view them
 
 ## 🐛 Troubleshooting
 

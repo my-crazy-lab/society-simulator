@@ -6,7 +6,9 @@
   "scripts": {
     "start": "npm run build && node dist/index.js",
     "build": "tsc",
-    "dev": "ts-node src/index.ts"
+    "dev": "ts-node src/index.ts",
+    "view": "ts-node src/viewer.ts",
+    "view:follow": "ts-node src/viewer.ts --follow"
   },
   "keywords": ["ai", "simulation", "gemini", "chat"],
   "author": "",
