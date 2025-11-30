@@ -1,0 +1,24 @@
+{
+  "name": "ai-society-simulator",
+  "version": "1.0.0",
+  "description": "Fully autonomous AI Society Chat Simulator with 8 characters",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npm run build && node dist/index.js",
+    "build": "tsc",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": ["ai", "simulation", "gemini", "chat"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "chalk": "^4.1.2",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
